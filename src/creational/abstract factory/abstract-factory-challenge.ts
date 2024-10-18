@@ -138,7 +138,12 @@ function appPiecesFactory(factory: AbstractPiecesFactory) {
 	memory.setCapacityInGB(8);
 	display.setResolution();
 }
-
+console.group("Phone");
 appPiecesFactory(new PhonePiecesFactory());
+console.groupEnd();
+console.group("Laptop");
 appPiecesFactory(new LaptopPiecesFactory());
+console.groupEnd();
+console.group("Tablet");
 appPiecesFactory(new TabletPiecesFactory());
+console.groupEnd();

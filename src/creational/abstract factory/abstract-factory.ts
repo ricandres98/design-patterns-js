@@ -80,21 +80,21 @@ interface CarAbstractFactory {
 /** STEP 4 */
 
 class SedanCarFactory implements CarAbstractFactory {
-    createMastodonCar() {
+    createMastodonCar(): MastodonCar {
         return new MastodonSedanCar();
     }
 
-    createRhinoCar() {
+    createRhinoCar(): RhinoCar {
         return new RhinoSedanCar();
     }
 }
 
 class HatchbackCarFactory implements CarAbstractFactory {
-    createMastodonCar() {
+    createMastodonCar(): MastodonCar {
         return new MastodonHatchbackCar();
     }
 
-    createRhinoCar() {
+    createRhinoCar(): RhinoCar {
         return new RhinoHatchbackCar();
     }
 }

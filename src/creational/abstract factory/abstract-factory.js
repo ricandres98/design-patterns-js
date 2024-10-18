@@ -76,7 +76,7 @@ class RhinoHatchbackCar extends RhinoCar {
 
 /** STEP 3 */
 
-class CarFactory {
+class CarAbstractFactory {
     createMastodonCar() {
         throw new Error("Method not implemented");       
     }
@@ -88,7 +88,7 @@ class CarFactory {
 
 /** STEP 4 */
 
-class SedanCarFactory extends CarFactory {
+class SedanCarFactory extends CarAbstractFactory {
     createMastodonCar() {
         return new MastodonSedanCar();
     }
@@ -98,7 +98,7 @@ class SedanCarFactory extends CarFactory {
     }
 }
 
-class HatchbackCarFactory extends CarFactory {
+class HatchbackCarFactory extends CarAbstractFactory {
     createMastodonCar() {
         return new MastodonHatchbackCar();
     }
